@@ -44,7 +44,6 @@ namespace vozCompetitions
                 if (message.Text.Split(' ')[0].Trim() == "/newcompetition")
                     try
                     {
-                        //if (AccessCompetition.Exists(message.Text.Split(' ', 3)[1].Trim()))
                         string hashtag = message.Text.Split(' ', 3)[1].Trim();
                         if (database.GetList<Competition>("Competitions").Exists(x => x.Hashtag == hashtag))
                         {
